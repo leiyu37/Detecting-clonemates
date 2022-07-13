@@ -1,4 +1,4 @@
-# Detecting pairwise clonemates based on "Shred Heterozygosity(SH)"
+# Detecting pairwise clonemates based on "Shared Heterozygosity(SH)"
 
 similarity.py: calculate SH indexes
 
