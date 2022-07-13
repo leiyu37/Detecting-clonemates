@@ -55,7 +55,7 @@ def similarity(vcf_path, sampleA, sampleB, out_path):
     ibh_s = round(min(ibh_a, ibh_b), 4)
 
     f_out = open(out_path, "w")
-    f_out.write("SampleA\tSampleB\tN_IBH\tIBH_A\tIBH_B\tIBHs\n")
+    f_out.write("SampleA\tSampleB\tNSH\tSH(SampleA)\tSH_(SampleB)\tSH(SampleA, SampleB)\n")
     f_out.write("{}\t{}\t{}\t{}\t{}\t{}\n".format(sampleA,sampleB,n_ibh,ibh_a,ibh_b,ibh_s))
     f_out.close()
 
