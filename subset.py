@@ -95,7 +95,7 @@ for line in f_in.readlines():
 f_in.close()
 
 f_out = open(out_path, "w")
-f_out.write("SampleA\tSampleB\tN_IBH\tIBHs\n")
+f_out.write("SampleA\tSampleB\tNSH\tSH(SampleA, SampleB)\n")
 
 for repeat in range(0, n):
     randomselect(vcf_path, f)
