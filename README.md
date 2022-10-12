@@ -24,9 +24,9 @@ For example:
 
 The output is: [DH12_DH15_SH.txt](output/DH12_DH15_SH.txt)
 
-For two samples (X1 and X2) in multicellular diploid clonal species, NSH(X1, X2) denotes the number of the SNPs where two samples are identically heterozygous; NHet(Xn) denotes the number of the heterozygous loci in Xn.  
-SH(X1) = NSH(X1, X2)/NHet(X1)  
-SH(X2) = NSH(X1, X2)/NHet(X2)  
+For two samples (X1 and X2) in multicellular diploid clonal species, NSH denotes the number of the SNPs where two samples are identically heterozygous; NHet(Xn) denotes the number of the heterozygous loci in Xn.  
+SH(X1) = NSH/NHet(X1)  
+SH(X2) = NSH/NHet(X2)  
 SH = min(SH(X1), SH(X2))  
 
 ## 5. Combining the results of all sample pairs
