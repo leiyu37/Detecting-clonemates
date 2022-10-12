@@ -1,1 +1,0 @@
-./generateAllPairs.py ./SH_pair.py ./data/all.vcf ./data/sample_pop.txt
