@@ -5,7 +5,7 @@ library(ggplot2)
 obj <- read.table("./output/SH_indices.txt", header = TRUE)
 obj01 = subset(obj, Type == "TR")
 
-png("NSH_SH.png", width = 600, height = 600, res = 300)
+png("NSH_SH.png", width = 1200, height = 1200, res = 300)
 ggplot(obj, aes(NSH, SH, color=Type)) +
   geom_point(shape = 4) +
   geom_hline(yintercept = 0.9, color = "orange") +
@@ -21,7 +21,7 @@ ggplot(obj, aes(NSH, SH, color=Type)) +
 dev.off()
 
 
-png("SH_histogram.png", width = 600, height = 600, res = 300)
+png("SH_histogram.png", width = 1200, height = 1200, res = 300)
 ggplot(obj, aes(SH)) +
   geom_histogram(binwidth = 0.01) +
   geom_vline(xintercept = 0.90, color = "orange") +
