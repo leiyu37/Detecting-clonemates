@@ -52,4 +52,4 @@ Samples pairs vertically close to the technical replicates represent clonemates.
 <img src="output/SH_histogram.png" alt="drawing" style="width:400px;"/>
 
 
-If technical replicates are not available, a threshold can be set to the valley of the histogram. The peak close to SH=1 represents clonemates.
+If technical replicates are not available, a threshold can be set to the valley of the histogram of SH. The peak close to SH=1 represents clonemates.
