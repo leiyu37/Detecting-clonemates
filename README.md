@@ -1,4 +1,5 @@
-# Detecting clonemate pairs based on "Shared Heterozygosity(SH)" and technical replicates
+# Detecting clonemate pairs in multicellular diploid clonal species based on shared heterozygosity and technical replicates
+
 ## 1. Requirements
 * A vcf file containing bi-allelic SNPs
 * [SH_pair.py](SH_pair.py)
