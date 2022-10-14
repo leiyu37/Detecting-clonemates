@@ -1,7 +1,7 @@
 # Detecting clonemate pairs in multicellular diploid clonal species based on shared heterozygosity and technical replicates
 
 ## 1. Requirements
-* A vcf file containing bi-allelic SNPs
+* A vcf file containing bi-allelic SNPs for diploid species
 * [SH_pair.py](SH_pair.py)
 ## 2. Example dataset
         data/all.vcf
