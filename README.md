@@ -1,4 +1,5 @@
-# Detecting clonemate pairs in multicellular diploid clonal species based on shared heterozygosity and technical replicates
+# Detecting clonemate pairs in multicellular diploid clonal species based on shared heterozygosity
+
 
 ## 1. Requirements
 * A vcf file containing bi-allelic SNPs for diploid species
