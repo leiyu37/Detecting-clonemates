@@ -45,12 +45,12 @@ Making plots using "ggplot2" package in R: [plot.R](plot.R).
         Rscript plot.R
 
 
-<img src="output/NSH_SH.png" alt="drawing" style="width:400px;"/>
+<img src="output/01.png" alt="drawing" style="width:400px;"/>
 
 
 Each data point represents one sample pair, and technical replicates are marked in blue.  
 Samples pairs vertically close to the technical replicates represent clonemates.
-<img src="output/SH_histogram.png" alt="drawing" style="width:400px;"/>
+<img src="output/02.png" alt="drawing" style="width:400px;"/>
 
 
-If technical replicates are not available, a threshold can be set to the valley of the histogram of SH. The peak close to SH=1 represents clonemates.
+If technical replicates are not available, a threshold can be set to separate intra-clone and inter-clone sample pairs. The mode close to SH=1 represents clonemates.
