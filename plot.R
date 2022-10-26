@@ -5,7 +5,22 @@ library(ggplot2)
 obj <- read.table("./output/SH_indices.txt", header = TRUE)
 obj01 = subset(obj, Type == "TR")
 
-png("NSH_SH.png", width = 1200, height = 1200, res = 300)
+pdf("NSH_SH_01.pdf", width = 4, height = 4)
+ggplot(obj, aes(NSH, SH, color=Type)) +
+  geom_point(shape = 4) +
+  theme_classic() +
+  ylab("SH") +
+  xlab("NSH") +
+  scale_x_continuous(limits = c(0, max(obj$NSH) +1), labels=function(x) format(x, big.mark = ",", scientific = FALSE)) +
+  scale_y_continuous(limits = c(0,1), breaks = c(0, 0.25, 0.50, 0.75, 1)) +
+  scale_color_manual(values = c("TR" = "blue", "Non-TR" = "grey")) +
+  geom_point(data=obj01, mapping=aes(NSH, SH), shape = 4) +
+  theme(legend.position = "none")
+
+dev.off()
+
+
+pdf("NSH_SH_02.pdf", width = 4, height = 4)
 ggplot(obj, aes(NSH, SH, color=Type)) +
   geom_point(shape = 4) +
   geom_hline(yintercept = 0.9, color = "orange") +
@@ -14,19 +29,8 @@ ggplot(obj, aes(NSH, SH, color=Type)) +
   xlab("NSH") +
   scale_x_continuous(limits = c(0, max(obj$NSH) +1), labels=function(x) format(x, big.mark = ",", scientific = FALSE)) +
   scale_y_continuous(limits = c(0,1), breaks = c(0, 0.25, 0.50, 0.75, 0.90, 1)) +
-  scale_color_manual(values = c("TR" = "blue", "Non-TR" = "grey")) +
+  scale_color_manual(values = c("TR" = "grey", "Non-TR" = "grey")) +
   geom_point(data=obj01, mapping=aes(NSH, SH), shape = 4) +
   theme(legend.position = "none")
 
-dev.off()
-
-
-png("SH_histogram.png", width = 1200, height = 1200, res = 300)
-ggplot(obj, aes(SH)) +
-  geom_histogram(binwidth = 0.01) +
-  geom_vline(xintercept = 0.90, color = "orange") +
-  theme_classic() +
-  xlab("SH") +
-  scale_y_continuous(labels=function(x) format(x, big.mark = ",", scientific = FALSE)) +
-  scale_x_continuous(limits = c(0,1), breaks = c(0, 0.25, 0.50, 0.75, 0.90, 1))
 dev.off()
